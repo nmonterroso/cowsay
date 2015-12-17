@@ -48,5 +48,5 @@ func generateCowList() string {
 	}
 
 	sort.Strings(list)
-	return strings.Join(list, "\n")
+	return strings.Join(list, ", ")
 }
