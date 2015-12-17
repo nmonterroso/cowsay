@@ -38,7 +38,7 @@ func Cowsay(args string) (string, error) {
 	}
 
 	if opts.List {
-		return list(), nil
+		return cowList, nil
 	}
 
 	forceMode(opts)
@@ -99,8 +99,4 @@ func getMessage(args []string) string {
 	}
 
 	return strings.Join(args, " ")
-}
-
-func list() string {
-	return ""
 }
