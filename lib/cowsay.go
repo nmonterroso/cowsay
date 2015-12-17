@@ -44,8 +44,14 @@ func Cowsay(args string) (string, error) {
 	forceMode(opts)
 	normalize(opts)
 
-	balloon, trail := balloonText(getMessage(messageArgs), opts)
-	return fmt.Sprintf("%s\n%s", balloon, trail), nil
+	balloon, trail := buildBalloon(getMessage(messageArgs), opts)
+	cow, err := buildCow(opts, trail)
+
+	if err != nil {
+		return "", err
+	}
+
+	return fmt.Sprintf("%s\n%s", balloon, cow), nil
 }
 
 func forceMode(opts *options) {
