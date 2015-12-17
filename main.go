@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/nmonterroso/cowsay/lib"
-	"strings"
-	"os"
 	"fmt"
+	"github.com/nmonterroso/cowsay/lib"
+	"os"
+	"strings"
 )
 
 func main() {

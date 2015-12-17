@@ -1,15 +1,22 @@
 package lib
 
 import (
+	"fmt"
 	"github.com/jessevdk/go-flags"
 	"strings"
+	"unicode/utf8"
+)
+
+const (
+	minTongueSize  = 2
+	defaultMessage = "moo"
 )
 
 type options struct {
 	Eyes     string `short:"e" long:"eyes" description:"the eyes to use" default:"oo"`
 	Tongue   string `short:"T" long:"tongue" description:"the tongue to use" default:"  "`
 	Cow      string `short:"f" long:"file" description:"the file to use" default:"default"`
-	Wrap     int    `short:"W" long:"wrap-width" description:"specify where the word should be wrapped" default:"40"`
+	MaxWidth int    `short:"W" long:"max-width" description:"specify where the word should be wrapped" default:"40"`
 	List     bool   `short:"l" long:"list" description:"list available cows" default:"false"`
 	Borg     bool   `short:"b" long:"borg" description:"borg mode" default:"false"`
 	Dead     bool   `short:"d" long:"dead" description:"dead mode" default:"false"`
@@ -30,6 +37,64 @@ func Cowsay(args string) (string, error) {
 		return "", err
 	}
 
-	message := strings.Join(messageArgs, " ")
-	return message + opts.Eyes, nil
+	if opts.List {
+		return list(), nil
+	}
+
+	forceMode(opts)
+	normalize(opts)
+
+	balloon, trail := balloonText(getMessage(messageArgs), opts)
+	return fmt.Sprintf("%s\n%s", balloon, trail), nil
+}
+
+func forceMode(opts *options) {
+	switch {
+	case opts.Borg:
+		opts.Eyes = "=="
+		opts.Tongue = "  "
+	case opts.Dead:
+		opts.Eyes = "xx"
+		opts.Tongue = "U "
+	case opts.Greedy:
+		opts.Eyes = "$$"
+		opts.Tongue = "  "
+	case opts.Paranoia:
+		opts.Eyes = "@@"
+		opts.Tongue = "  "
+	case opts.Stoned:
+		opts.Eyes = "**"
+		opts.Tongue = "U "
+	case opts.Tired:
+		opts.Eyes = "--"
+		opts.Tongue = "  "
+	case opts.Wired:
+		opts.Eyes = "OO"
+		opts.Tongue = "  "
+	case opts.Youthful:
+		opts.Eyes = ".."
+		opts.Tongue = "  "
+	}
+}
+
+func normalize(opts *options) {
+	normalizeTongue(opts)
+}
+
+func normalizeTongue(opts *options) {
+	for utf8.RuneCountInString(opts.Tongue) < minTongueSize {
+		opts.Tongue += " "
+	}
+}
+
+func getMessage(args []string) string {
+	if len(args) == 0 {
+		return defaultMessage
+	}
+
+	return strings.Join(args, " ")
+}
+
+func list() string {
+	return ""
 }
