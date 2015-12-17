@@ -31,9 +31,8 @@ var normalTrail balloonTrail = "\\"
 var thoughtfulTrail balloonTrail = "o"
 
 func balloonText(text string, opts *options) (string, balloonTrail) {
-	border, trail := balloonSettings(opts.Think)
-
 	maxWidth := opts.MaxWidth
+	border, trail := balloonSettings(opts.Think)
 	text = wordwrap.WrapString(text, uint(maxWidth))
 	lines := strings.Split(text, "\n")
 
