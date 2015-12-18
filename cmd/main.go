@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/nmonterroso/cowsay/lib"
+	"github.com/nmonterroso/cowsay"
 	"os"
 	"strings"
 )
 
 func main() {
 	args := strings.Join(os.Args[1:], " ")
-	message, _ := lib.Cowsay(args)
+	message, _ := cowsay.Cowsay(args)
 	fmt.Printf("%s", message)
 }
