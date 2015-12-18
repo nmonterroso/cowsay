@@ -1,6 +1,7 @@
 package cowsay
 
 import (
+	"errors"
 	"fmt"
 	"github.com/jessevdk/go-flags"
 	"strings"
@@ -10,9 +11,16 @@ import (
 const (
 	minTongueSize  = 2
 	defaultMessage = "moo"
+	HelpEyes       = "oo"
+	HelpTongue     = "  "
+	HelpCow        = "dragon-and-cow"
 )
 
-type options struct {
+var (
+	CowNotFound = errors.New("cow not found")
+)
+
+type Options struct {
 	Eyes     string `short:"e" long:"eyes" description:"the eyes to use" default:"oo"`
 	Tongue   string `short:"T" long:"tongue" description:"the tongue to use" default:"  "`
 	Cow      string `short:"f" long:"file" description:"the file to use" default:"default"`
@@ -29,32 +37,61 @@ type options struct {
 	Think    bool   `long:"think" description:"thinking cow" default:"false"`
 }
 
-func Cowsay(args string) (string, error) {
-	opts := &options{}
-	messageArgs, err := flags.ParseArgs(opts, strings.Split(args, " "))
+type Cow struct {
+	Options  *Options
+	Message  string
+	IsHelper bool
+}
 
-	if err != nil {
-		return "", err
-	}
-
-	if opts.List {
+func (c *Cow) Speak() (string, error) {
+	if c.Options.List {
 		return cowList, nil
 	}
 
-	forceMode(opts)
-	normalize(opts)
-
-	balloon, trail := buildBalloon(getMessage(messageArgs), opts)
-	cow, err := buildCow(opts, trail)
+	balloon, trail := buildBalloon(c.Message, c.Options)
+	cow, err := buildCow(c.Options, trail)
 
 	if err != nil {
-		return "", err
+		return "", CowNotFound
 	}
 
 	return fmt.Sprintf("%s\n%s", balloon, cow), nil
 }
 
-func forceMode(opts *options) {
+func Say(args string) (string, error) {
+	cow, err := ParseArgs(args)
+
+	if err != nil {
+		return "", err
+	}
+
+	return cow.Speak()
+}
+
+func ParseArgs(args string) (*Cow, error) {
+	opts := &Options{}
+	messageArgs, err := flags.ParseArgs(opts, strings.Split(args, " "))
+
+	if err != nil {
+		flagError, ok := err.(*flags.Error)
+		if ok && flagError.Type == flags.ErrHelp {
+			opts.Eyes = HelpEyes
+			opts.Cow = HelpCow
+			opts.Tongue = HelpTongue
+
+			return &Cow{opts, flagError.Message, true}, nil
+		} else {
+			return nil, err
+		}
+	}
+
+	forceMode(opts)
+	normalize(opts)
+
+	return &Cow{opts, getMessage(messageArgs), false}, nil
+}
+
+func forceMode(opts *Options) {
 	switch {
 	case opts.Borg:
 		opts.Eyes = "=="
@@ -83,11 +120,11 @@ func forceMode(opts *options) {
 	}
 }
 
-func normalize(opts *options) {
+func normalize(opts *Options) {
 	normalizeTongue(opts)
 }
 
-func normalizeTongue(opts *options) {
+func normalizeTongue(opts *Options) {
 	for utf8.RuneCountInString(opts.Tongue) < minTongueSize {
 		opts.Tongue += " "
 	}

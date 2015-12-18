@@ -30,7 +30,7 @@ var thoughtfulBorder = &balloonBorder{
 var normalTrail balloonTrail = "\\"
 var thoughtfulTrail balloonTrail = "o"
 
-func buildBalloon(text string, opts *options) (string, balloonTrail) {
+func buildBalloon(text string, opts *Options) (string, balloonTrail) {
 	maxWidth := opts.MaxWidth
 	border, trail := balloonSettings(opts.Think)
 	text = wordwrap.WrapString(text, uint(maxWidth))

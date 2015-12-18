@@ -9,6 +9,6 @@ import (
 
 func main() {
 	args := strings.Join(os.Args[1:], " ")
-	message, _ := cowsay.Cowsay(args)
+	message, _ := cowsay.Say(args)
 	fmt.Printf("%s", message)
 }

@@ -17,7 +17,7 @@ var (
 	cowList            = generateCowList()
 )
 
-func buildCow(opts *options, trail balloonTrail) (string, error) {
+func buildCow(opts *Options, trail balloonTrail) (string, error) {
 	cowFile := fmt.Sprintf("%s%s", opts.Cow, cowSuffix)
 	cowBytes, err := cows.Asset(cowFile)
 
