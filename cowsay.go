@@ -70,7 +70,7 @@ func Say(args string) (string, error) {
 
 func ParseArgs(args string) (*Cow, error) {
 	opts := &Options{}
-	messageArgs, err := flags.ParseArgs(opts, strings.Split(args, " "))
+	messageArgs, err := flags.NewParser(opts, flags.HelpFlag).ParseArgs(strings.Split(args, " "))
 
 	if err != nil {
 		flagError, ok := err.(*flags.Error)
