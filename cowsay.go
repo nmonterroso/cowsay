@@ -78,8 +78,9 @@ func ParseArgs(args string) (*Cow, error) {
 			opts.Eyes = HelpEyes
 			opts.Cow = HelpCow
 			opts.Tongue = HelpTongue
+			message := strings.SplitN(flagError.Message, "\n", 3)[2]
 
-			return &Cow{opts, flagError.Message, true}, nil
+			return &Cow{opts, message, true}, nil
 		} else {
 			return nil, err
 		}
