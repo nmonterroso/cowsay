@@ -35,6 +35,7 @@ type Options struct {
 	Wired    bool   `short:"w" long:"wired" description:"wired mode" default:"false"`
 	Youthful bool   `short:"y" long:"youthful" description:"youthful mode" default:"false"`
 	Think    bool   `long:"think" description:"thinking cow" default:"false"`
+	Random   bool   `short:"r" long:"random" description:"use a random cow"`
 }
 
 type Cow struct {
@@ -45,7 +46,7 @@ type Cow struct {
 
 func (c *Cow) Speak() (string, error) {
 	if c.Options.List {
-		return cowList, nil
+		return strings.Join(cowList, ", "), nil
 	}
 
 	balloon, trail := buildBalloon(c.Message, c.Options)

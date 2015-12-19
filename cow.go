@@ -3,6 +3,7 @@ package cowsay
 import (
 	"fmt"
 	"github.com/nmonterroso/cowsay/cows"
+	"math/rand"
 	"regexp"
 	"sort"
 	"strings"
@@ -18,6 +19,10 @@ var (
 )
 
 func buildCow(opts *Options, trail balloonTrail) (string, error) {
+	if opts.Random {
+		opts.Cow = randomCowFile()
+	}
+
 	cowFile := fmt.Sprintf("%s%s", opts.Cow, cowSuffix)
 	cowBytes, err := cows.Asset(cowFile)
 
@@ -40,7 +45,12 @@ func buildCow(opts *Options, trail balloonTrail) (string, error) {
 	return cow, nil
 }
 
-func generateCowList() string {
+func randomCowFile() string {
+	index := rand.Intn(len(cowList))
+	return cowList[index]
+}
+
+func generateCowList() []string {
 	list := make([]string, 0)
 
 	for _, cow := range cows.AssetNames() {
@@ -48,5 +58,5 @@ func generateCowList() string {
 	}
 
 	sort.Strings(list)
-	return strings.Join(list, ", ")
+	return list
 }
