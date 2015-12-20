@@ -13,6 +13,6 @@ cows/cows.go: $(GOPATH)/bin/go-bindata
 cows: cows/cows.go
 
 build: cows/cows.go
-	go build -o build/cowsay
+	go build -o build/cowsay github.com/nmonterroso/cowsay/cmd
 
 all: cows build
