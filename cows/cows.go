@@ -373,7 +373,7 @@ func eyesCow() (*asset, error) {
 	return a, nil
 }
 
-var _flamingSheepCow = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x6c\xd1\x5f\x4b\x84\x40\x14\x05\xf0\x77\x3f\xc5\x01\x17\x5c\xc1\xbd\xbd\xbb\x1b\x2c\x44\xf4\x18\x44\xfb\x20\x08\x8e\x7f\x6e\x3a\xb4\x39\xe1\x1f\x42\x9a\xfa\xec\x8d\xca\xba\x4e\x75\xe6\x72\x18\xae\x3f\x04\xd1\x75\x1d\xd7\xc5\x73\xc5\x78\x39\xa7\x6f\xb2\x2e\xd1\x56\xcc\xef\x01\x72\x55\x77\x8d\xcc\xfa\x8e\x0b\x64\x03\x1e\x58\x35\x45\x5a\xe3\x49\xb5\x69\x23\x15\xb6\xe5\xbc\x38\xe6\x6d\x9f\x52\xc6\xcd\x2b\x9f\x79\x20\x2e\x7a\xdf\xbc\xd0\xd9\x74\x15\x27\xb9\xfa\xc0\x2d\x0e\x87\xfb\xc7\xbb\xbd\x03\x98\x9d\xea\xcb\xaa\x6b\xb1\x0a\x2d\x35\xb5\x61\xbf\x1d\x8d\x33\x0b\x01\x04\xd3\x65\x64\xb6\xa3\xfd\x68\x42\x90\x67\x6a\x1e\x9a\x99\xe5\x24\x91\x08\x21\x85\xb9\x48\x0a\xa4\x59\x2c\xcc\x72\x22\xd8\xed\x48\x4b\x68\xa9\xe5\x3c\xe1\x85\x4d\x39\x6d\x3e\x79\xe0\xf6\xeb\x14\xc7\xe4\xc5\xc7\xeb\x11\xa4\xb5\x67\xd1\x38\x4e\x92\x9b\xed\xda\x5c\x8e\xef\xc1\x92\x53\xfe\x48\x7f\xf9\xe0\x75\x44\x14\x7d\x9b\x44\x91\xf7\xef\x63\x68\x7d\x6d\x38\xe6\x0f\x38\x3f\x01\x00\x00\xff\xff\xe1\x4b\x16\x1c\xea\x01\x00\x00")
+var _flamingSheepCow = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x6c\xd0\x4d\x6b\x83\x40\x10\x06\xe0\xbb\xbf\xe2\x05\x03\x26\x60\xa6\x77\x93\x42\xa0\x94\x1e\x0b\xa5\x39\x08\x82\xeb\xc7\x54\x87\xa6\x6e\xf1\x83\x22\x2c\xfd\xed\x5d\x95\x18\x6d\xfb\xee\x30\x2c\xe3\xc3\x80\xeb\xba\x8e\xeb\xe2\xb5\x64\xbc\x5d\x92\x0f\xa9\x0a\x34\x25\xf3\xa7\x8f\x4c\x57\x6d\x2d\x69\xd7\x72\x8e\xb4\xc7\x13\xeb\x3a\x4f\x2a\xbc\xe8\x26\xa9\x45\x63\x5b\x4c\x83\x53\xd6\x74\x09\xa5\x5c\xbf\xf3\x85\x7b\xe2\xbc\xdb\xd9\x85\xce\xa6\x2d\x39\xce\xf4\x17\xee\x71\x3c\x3e\x3e\x3f\x1c\x1c\xc0\xce\x74\x57\x94\x6d\x83\x45\x68\x6e\x63\xb7\xec\xb7\xa3\xa1\x26\xa1\x00\x7f\xbc\x0c\x6c\xed\xe8\x30\x98\x00\xe4\xd9\x36\x15\x4d\x6c\xe5\x84\x48\x05\x10\x65\x2f\x42\xbe\xd8\xc1\xcc\x56\x4e\xf9\xfb\x3d\x19\x81\x11\x23\x53\x05\x57\x36\xe6\xbc\xe1\x9e\x9b\x73\x14\x91\x17\x9d\x6e\x47\x91\x31\xde\xd2\x45\x51\x1c\xdf\x6d\x97\xe4\x7a\x76\x1e\x56\x1b\xc7\xfc\x91\xbb\xf9\x6f\x97\x51\x61\xf8\x6d\x13\x86\xde\xbf\x9f\x61\xcc\xad\xc3\xb1\xcf\xef\xfc\x04\x00\x00\xff\xff\xdb\x1d\xe2\x09\xe7\x01\x00\x00")
 
 func flamingSheepCowBytes() ([]byte, error) {
 	return bindataRead(
@@ -388,7 +388,7 @@ func flamingSheepCow() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "flaming-sheep.cow", size: 490, mode: os.FileMode(420), modTime: time.Unix(1450313551, 0)}
+	info := bindataFileInfo{name: "flaming-sheep.cow", size: 487, mode: os.FileMode(420), modTime: time.Unix(1450575508, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -713,7 +713,7 @@ func satanicCow() (*asset, error) {
 	return a, nil
 }
 
-var _sheepCow = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x52\x56\xe6\x52\x56\x56\x08\xc9\x48\x55\xc8\xcb\xcf\xd3\x4d\xcb\x49\xcc\xcd\xcc\x4b\x57\x28\xce\x48\x4d\x2d\xd0\x03\xca\x70\xa9\x94\x64\xa4\xc6\x27\xe7\x97\x2b\xd8\x2a\xd8\xd8\xb8\xfa\x3b\x73\x29\x28\x00\x85\xf2\x4b\xd3\x33\x4a\x8a\x81\x6c\x54\x0e\x08\xc4\xc7\x83\x29\x28\x37\x54\xa5\x3a\xb5\x32\xb5\xb8\x36\x34\x26\x46\x4f\x3d\xc6\x01\x01\x13\xf4\xa0\x2a\x62\x62\xe2\xe3\xf5\x35\x90\xa5\x60\x50\x13\x66\x24\x08\x60\xa8\x40\x91\x4d\x88\x8c\xac\x03\x82\xc8\x48\x75\x64\x51\x85\x9a\x1a\x08\xc9\x05\x72\x38\x20\x00\x00\xff\xff\xc0\xf5\xbe\x61\xea\x00\x00\x00")
+var _sheepCow = []byte("\x1f\x8b\x08\x00\x00\x09\x6e\x88\x00\xff\x52\x56\xe6\x52\x56\x56\x08\xc9\x48\x55\xc8\xcb\xcf\xd3\x4d\xcb\x49\xcc\xcd\xcc\x4b\x57\x28\xce\x48\x4d\x2d\xd0\x03\xca\x70\xa9\x94\x64\xa4\xc6\x27\xe7\x97\x2b\xd8\x2a\xd8\xd8\xb8\xfa\x3b\x73\x29\x28\x00\x85\xf2\x4b\xd3\x33\x4a\x8a\x81\x6c\x54\x0e\x08\xc4\xc7\x83\x29\x28\x37\x54\x25\xb5\x32\xb5\x38\x34\x26\x46\x4f\x3d\xc6\x01\x01\x13\xf4\xa0\xf2\x31\x31\xf1\xf1\xfa\x1a\xc8\x52\x30\xa8\x09\x33\x10\x04\x30\x54\xa0\xc8\x26\x44\x46\xd6\x01\x41\x64\xa4\x3a\xb2\xa8\x42\x4d\x0d\x84\xe4\x02\x39\x1b\x10\x00\x00\xff\xff\xf1\x64\x06\x99\xe8\x00\x00\x00")
 
 func sheepCowBytes() ([]byte, error) {
 	return bindataRead(
@@ -728,7 +728,7 @@ func sheepCow() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "sheep.cow", size: 234, mode: os.FileMode(420), modTime: time.Unix(1450313551, 0)}
+	info := bindataFileInfo{name: "sheep.cow", size: 232, mode: os.FileMode(420), modTime: time.Unix(1450575496, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1085,52 +1085,52 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"beavis.zen.cow":        beavisZenCow,
-	"bong.cow":              bongCow,
-	"bud-frogs.cow":         budFrogsCow,
-	"bunny.cow":             bunnyCow,
-	"cheese.cow":            cheeseCow,
-	"cower.cow":             cowerCow,
-	"daemon.cow":            daemonCow,
-	"default.cow":           defaultCow,
-	"dragon-and-cow.cow":    dragonAndCowCow,
-	"dragon.cow":            dragonCow,
+	"beavis.zen.cow": beavisZenCow,
+	"bong.cow": bongCow,
+	"bud-frogs.cow": budFrogsCow,
+	"bunny.cow": bunnyCow,
+	"cheese.cow": cheeseCow,
+	"cower.cow": cowerCow,
+	"daemon.cow": daemonCow,
+	"default.cow": defaultCow,
+	"dragon-and-cow.cow": dragonAndCowCow,
+	"dragon.cow": dragonCow,
 	"elephant-in-snake.cow": elephantInSnakeCow,
-	"elephant.cow":          elephantCow,
-	"eyes.cow":              eyesCow,
-	"flaming-sheep.cow":     flamingSheepCow,
-	"ghostbusters.cow":      ghostbustersCow,
-	"head-in.cow":           headInCow,
-	"hellokitty.cow":        hellokittyCow,
-	"kiss.cow":              kissCow,
-	"kitty.cow":             kittyCow,
-	"koala.cow":             koalaCow,
-	"kosh.cow":              koshCow,
-	"luke-koala.cow":        lukeKoalaCow,
-	"mech-and-cow.cow":      mechAndCowCow,
-	"meow.cow":              meowCow,
-	"milk.cow":              milkCow,
-	"moofasa.cow":           moofasaCow,
-	"moose.cow":             mooseCow,
-	"mutilated.cow":         mutilatedCow,
-	"ren.cow":               renCow,
-	"satanic.cow":           satanicCow,
-	"sheep.cow":             sheepCow,
-	"skeleton.cow":          skeletonCow,
-	"small.cow":             smallCow,
-	"sodomized.cow":         sodomizedCow,
-	"squirrel.cow":          squirrelCow,
-	"stegosaurus.cow":       stegosaurusCow,
-	"stimpy.cow":            stimpyCow,
-	"supermilker.cow":       supermilkerCow,
-	"surgery.cow":           surgeryCow,
-	"telebears.cow":         telebearsCow,
-	"turkey.cow":            turkeyCow,
-	"turtle.cow":            turtleCow,
-	"tux.cow":               tuxCow,
-	"vader-koala.cow":       vaderKoalaCow,
-	"vader.cow":             vaderCow,
-	"www.cow":               wwwCow,
+	"elephant.cow": elephantCow,
+	"eyes.cow": eyesCow,
+	"flaming-sheep.cow": flamingSheepCow,
+	"ghostbusters.cow": ghostbustersCow,
+	"head-in.cow": headInCow,
+	"hellokitty.cow": hellokittyCow,
+	"kiss.cow": kissCow,
+	"kitty.cow": kittyCow,
+	"koala.cow": koalaCow,
+	"kosh.cow": koshCow,
+	"luke-koala.cow": lukeKoalaCow,
+	"mech-and-cow.cow": mechAndCowCow,
+	"meow.cow": meowCow,
+	"milk.cow": milkCow,
+	"moofasa.cow": moofasaCow,
+	"moose.cow": mooseCow,
+	"mutilated.cow": mutilatedCow,
+	"ren.cow": renCow,
+	"satanic.cow": satanicCow,
+	"sheep.cow": sheepCow,
+	"skeleton.cow": skeletonCow,
+	"small.cow": smallCow,
+	"sodomized.cow": sodomizedCow,
+	"squirrel.cow": squirrelCow,
+	"stegosaurus.cow": stegosaurusCow,
+	"stimpy.cow": stimpyCow,
+	"supermilker.cow": supermilkerCow,
+	"surgery.cow": surgeryCow,
+	"telebears.cow": telebearsCow,
+	"turkey.cow": turkeyCow,
+	"turtle.cow": turtleCow,
+	"tux.cow": tuxCow,
+	"vader-koala.cow": vaderKoalaCow,
+	"vader.cow": vaderCow,
+	"www.cow": wwwCow,
 }
 
 // AssetDir returns the file names below a certain
@@ -1172,54 +1172,53 @@ type bintree struct {
 	Func     func() (*asset, error)
 	Children map[string]*bintree
 }
-
 var _bintree = &bintree{nil, map[string]*bintree{
-	"beavis.zen.cow":        &bintree{beavisZenCow, map[string]*bintree{}},
-	"bong.cow":              &bintree{bongCow, map[string]*bintree{}},
-	"bud-frogs.cow":         &bintree{budFrogsCow, map[string]*bintree{}},
-	"bunny.cow":             &bintree{bunnyCow, map[string]*bintree{}},
-	"cheese.cow":            &bintree{cheeseCow, map[string]*bintree{}},
-	"cower.cow":             &bintree{cowerCow, map[string]*bintree{}},
-	"daemon.cow":            &bintree{daemonCow, map[string]*bintree{}},
-	"default.cow":           &bintree{defaultCow, map[string]*bintree{}},
-	"dragon-and-cow.cow":    &bintree{dragonAndCowCow, map[string]*bintree{}},
-	"dragon.cow":            &bintree{dragonCow, map[string]*bintree{}},
+	"beavis.zen.cow": &bintree{beavisZenCow, map[string]*bintree{}},
+	"bong.cow": &bintree{bongCow, map[string]*bintree{}},
+	"bud-frogs.cow": &bintree{budFrogsCow, map[string]*bintree{}},
+	"bunny.cow": &bintree{bunnyCow, map[string]*bintree{}},
+	"cheese.cow": &bintree{cheeseCow, map[string]*bintree{}},
+	"cower.cow": &bintree{cowerCow, map[string]*bintree{}},
+	"daemon.cow": &bintree{daemonCow, map[string]*bintree{}},
+	"default.cow": &bintree{defaultCow, map[string]*bintree{}},
+	"dragon-and-cow.cow": &bintree{dragonAndCowCow, map[string]*bintree{}},
+	"dragon.cow": &bintree{dragonCow, map[string]*bintree{}},
 	"elephant-in-snake.cow": &bintree{elephantInSnakeCow, map[string]*bintree{}},
-	"elephant.cow":          &bintree{elephantCow, map[string]*bintree{}},
-	"eyes.cow":              &bintree{eyesCow, map[string]*bintree{}},
-	"flaming-sheep.cow":     &bintree{flamingSheepCow, map[string]*bintree{}},
-	"ghostbusters.cow":      &bintree{ghostbustersCow, map[string]*bintree{}},
-	"head-in.cow":           &bintree{headInCow, map[string]*bintree{}},
-	"hellokitty.cow":        &bintree{hellokittyCow, map[string]*bintree{}},
-	"kiss.cow":              &bintree{kissCow, map[string]*bintree{}},
-	"kitty.cow":             &bintree{kittyCow, map[string]*bintree{}},
-	"koala.cow":             &bintree{koalaCow, map[string]*bintree{}},
-	"kosh.cow":              &bintree{koshCow, map[string]*bintree{}},
-	"luke-koala.cow":        &bintree{lukeKoalaCow, map[string]*bintree{}},
-	"mech-and-cow.cow":      &bintree{mechAndCowCow, map[string]*bintree{}},
-	"meow.cow":              &bintree{meowCow, map[string]*bintree{}},
-	"milk.cow":              &bintree{milkCow, map[string]*bintree{}},
-	"moofasa.cow":           &bintree{moofasaCow, map[string]*bintree{}},
-	"moose.cow":             &bintree{mooseCow, map[string]*bintree{}},
-	"mutilated.cow":         &bintree{mutilatedCow, map[string]*bintree{}},
-	"ren.cow":               &bintree{renCow, map[string]*bintree{}},
-	"satanic.cow":           &bintree{satanicCow, map[string]*bintree{}},
-	"sheep.cow":             &bintree{sheepCow, map[string]*bintree{}},
-	"skeleton.cow":          &bintree{skeletonCow, map[string]*bintree{}},
-	"small.cow":             &bintree{smallCow, map[string]*bintree{}},
-	"sodomized.cow":         &bintree{sodomizedCow, map[string]*bintree{}},
-	"squirrel.cow":          &bintree{squirrelCow, map[string]*bintree{}},
-	"stegosaurus.cow":       &bintree{stegosaurusCow, map[string]*bintree{}},
-	"stimpy.cow":            &bintree{stimpyCow, map[string]*bintree{}},
-	"supermilker.cow":       &bintree{supermilkerCow, map[string]*bintree{}},
-	"surgery.cow":           &bintree{surgeryCow, map[string]*bintree{}},
-	"telebears.cow":         &bintree{telebearsCow, map[string]*bintree{}},
-	"turkey.cow":            &bintree{turkeyCow, map[string]*bintree{}},
-	"turtle.cow":            &bintree{turtleCow, map[string]*bintree{}},
-	"tux.cow":               &bintree{tuxCow, map[string]*bintree{}},
-	"vader-koala.cow":       &bintree{vaderKoalaCow, map[string]*bintree{}},
-	"vader.cow":             &bintree{vaderCow, map[string]*bintree{}},
-	"www.cow":               &bintree{wwwCow, map[string]*bintree{}},
+	"elephant.cow": &bintree{elephantCow, map[string]*bintree{}},
+	"eyes.cow": &bintree{eyesCow, map[string]*bintree{}},
+	"flaming-sheep.cow": &bintree{flamingSheepCow, map[string]*bintree{}},
+	"ghostbusters.cow": &bintree{ghostbustersCow, map[string]*bintree{}},
+	"head-in.cow": &bintree{headInCow, map[string]*bintree{}},
+	"hellokitty.cow": &bintree{hellokittyCow, map[string]*bintree{}},
+	"kiss.cow": &bintree{kissCow, map[string]*bintree{}},
+	"kitty.cow": &bintree{kittyCow, map[string]*bintree{}},
+	"koala.cow": &bintree{koalaCow, map[string]*bintree{}},
+	"kosh.cow": &bintree{koshCow, map[string]*bintree{}},
+	"luke-koala.cow": &bintree{lukeKoalaCow, map[string]*bintree{}},
+	"mech-and-cow.cow": &bintree{mechAndCowCow, map[string]*bintree{}},
+	"meow.cow": &bintree{meowCow, map[string]*bintree{}},
+	"milk.cow": &bintree{milkCow, map[string]*bintree{}},
+	"moofasa.cow": &bintree{moofasaCow, map[string]*bintree{}},
+	"moose.cow": &bintree{mooseCow, map[string]*bintree{}},
+	"mutilated.cow": &bintree{mutilatedCow, map[string]*bintree{}},
+	"ren.cow": &bintree{renCow, map[string]*bintree{}},
+	"satanic.cow": &bintree{satanicCow, map[string]*bintree{}},
+	"sheep.cow": &bintree{sheepCow, map[string]*bintree{}},
+	"skeleton.cow": &bintree{skeletonCow, map[string]*bintree{}},
+	"small.cow": &bintree{smallCow, map[string]*bintree{}},
+	"sodomized.cow": &bintree{sodomizedCow, map[string]*bintree{}},
+	"squirrel.cow": &bintree{squirrelCow, map[string]*bintree{}},
+	"stegosaurus.cow": &bintree{stegosaurusCow, map[string]*bintree{}},
+	"stimpy.cow": &bintree{stimpyCow, map[string]*bintree{}},
+	"supermilker.cow": &bintree{supermilkerCow, map[string]*bintree{}},
+	"surgery.cow": &bintree{surgeryCow, map[string]*bintree{}},
+	"telebears.cow": &bintree{telebearsCow, map[string]*bintree{}},
+	"turkey.cow": &bintree{turkeyCow, map[string]*bintree{}},
+	"turtle.cow": &bintree{turtleCow, map[string]*bintree{}},
+	"tux.cow": &bintree{tuxCow, map[string]*bintree{}},
+	"vader-koala.cow": &bintree{vaderKoalaCow, map[string]*bintree{}},
+	"vader.cow": &bintree{vaderCow, map[string]*bintree{}},
+	"www.cow": &bintree{wwwCow, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory
@@ -1268,3 +1267,4 @@ func _filePath(dir, name string) string {
 	cannonicalName := strings.Replace(name, "\\", "/", -1)
 	return filepath.Join(append([]string{dir}, strings.Split(cannonicalName, "/")...)...)
 }
+
