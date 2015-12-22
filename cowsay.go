@@ -25,7 +25,7 @@ type Options struct {
 	Tongue   string `short:"T" long:"tongue" description:"the tongue to use" default:"  "`
 	Animal   string `short:"a" long:"animal" description:"the animal to use (see --list)" default:"default"`
 	MaxWidth int    `short:"W" long:"max-width" description:"specify where the word should be wrapped" default:"40"`
-	List     bool   `short:"l" long:"list" description:"list available cows" default:"false"`
+	List     bool   `short:"l" long:"list" description:"list available animals" default:"false"`
 	Borg     bool   `short:"b" long:"borg" description:"borg mode" default:"false"`
 	Dead     bool   `short:"d" long:"dead" description:"dead mode" default:"false"`
 	Greedy   bool   `short:"g" long:"greedy" description:"greedy mode" default:"false"`
