@@ -23,7 +23,7 @@ var (
 type Options struct {
 	Eyes     string `short:"e" long:"eyes" description:"the eyes to use" default:"oo"`
 	Tongue   string `short:"T" long:"tongue" description:"the tongue to use" default:"  "`
-	Cow      string `short:"f" long:"file" description:"the file to use" default:"default"`
+	Animal   string `short:"a" long:"animal" description:"the animal to use (see --list)" default:"default"`
 	MaxWidth int    `short:"W" long:"max-width" description:"specify where the word should be wrapped" default:"40"`
 	List     bool   `short:"l" long:"list" description:"list available cows" default:"false"`
 	Borg     bool   `short:"b" long:"borg" description:"borg mode" default:"false"`
@@ -46,11 +46,11 @@ type Cow struct {
 
 func (c *Cow) Speak() (string, error) {
 	if c.Options.List {
-		return strings.Join(cowList, ", "), nil
+		return strings.Join(animalList, ", "), nil
 	}
 
 	balloon, trail := buildBalloon(c.Message, c.Options)
-	cow, err := buildCow(c.Options, trail)
+	cow, err := buildAnimal(c.Options, trail)
 
 	if err != nil {
 		return "", CowNotFound
@@ -77,7 +77,7 @@ func ParseArgs(args string) (*Cow, error) {
 		flagError, ok := err.(*flags.Error)
 		if ok && flagError.Type == flags.ErrHelp {
 			opts.Eyes = HelpEyes
-			opts.Cow = HelpCow
+			opts.Animal = HelpCow
 			opts.Tongue = HelpTongue
 			message := strings.SplitN(flagError.Message, "\n", 3)[2]
 

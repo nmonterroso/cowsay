@@ -15,15 +15,15 @@ const (
 
 var (
 	commentFilterRegex = regexp.MustCompile("##.*\n")
-	cowList            = generateCowList()
+	animalList         = generateAnimalList()
 )
 
-func buildCow(opts *Options, trail balloonTrail) (string, error) {
+func buildAnimal(opts *Options, trail balloonTrail) (string, error) {
 	if opts.Random {
-		opts.Cow = randomCowFile()
+		opts.Animal = randomAnimalFile()
 	}
 
-	cowFile := fmt.Sprintf("%s%s", opts.Cow, cowSuffix)
+	cowFile := fmt.Sprintf("%s%s", opts.Animal, cowSuffix)
 	cowBytes, err := cows.Asset(cowFile)
 
 	if err != nil {
@@ -45,12 +45,12 @@ func buildCow(opts *Options, trail balloonTrail) (string, error) {
 	return cow, nil
 }
 
-func randomCowFile() string {
-	index := rand.Intn(len(cowList))
-	return cowList[index]
+func randomAnimalFile() string {
+	index := rand.Intn(len(animalList))
+	return animalList[index]
 }
 
-func generateCowList() []string {
+func generateAnimalList() []string {
 	list := make([]string, 0)
 
 	for _, cow := range cows.AssetNames() {
