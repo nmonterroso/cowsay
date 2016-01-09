@@ -1,7 +1,7 @@
 clean: cleanCows
 	rm -rf build
 
-cleanCows:
+cleancows:
 	rm -rf cows/cows.go
 
 $(GOPATH)/bin/go-bindata:
