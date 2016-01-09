@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/nmonterroso/cowsay",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/jessevdk/go-flags",
+			"Comment": "v1-328-gd91b7c5",
+			"Rev": "d91b7c5a5ce0b1d99d765ec3fb20ab590e52ddcb"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/go-wordwrap",
+			"Rev": "ad45545899c7b13c020ea92b2072220eefad42b8"
+		}
+	]
+}
