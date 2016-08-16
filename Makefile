@@ -1,18 +1,18 @@
-clean: cleanCows
+clean: cleantemplates
 	rm -rf build
 
-cleancows:
-	rm -rf cows/cows.go
+cleantemplates:
+	rm -rf templates/templates.go
 
 $(GOPATH)/bin/go-bindata:
 	go get -u github.com/jteeuwen/go-bindata/...
 
-cows/cows.go: $(GOPATH)/bin/go-bindata
-	go-bindata -o cows/cows.go -pkg cows -prefix cows -ignore cows.go cows/...
+templates/templates.go: $(GOPATH)/bin/go-bindata
+	go-bindata -o templates/templates.go -pkg templates -prefix templates -ignore templates.go templates/...
 
-cows: cows/cows.go
+templates: templates/templates.go
 
-build: cows/cows.go
+build: templates
 	go build -o build/cowsay github.com/nmonterroso/cowsay/cmd
 
-all: cows build
+all: templates build

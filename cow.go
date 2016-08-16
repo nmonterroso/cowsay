@@ -2,7 +2,7 @@ package cowsay
 
 import (
 	"fmt"
-	"github.com/nmonterroso/cowsay/cows"
+	"github.com/nmonterroso/cowsay/templates"
 	"math/rand"
 	"regexp"
 	"sort"
@@ -24,7 +24,7 @@ func buildAnimal(opts *Options, trail balloonTrail) (string, error) {
 	}
 
 	cowFile := fmt.Sprintf("%s%s", opts.Animal, cowSuffix)
-	cowBytes, err := cows.Asset(cowFile)
+	cowBytes, err := templates.Asset(cowFile)
 
 	if err != nil {
 		return "", err
@@ -53,7 +53,7 @@ func randomAnimalFile() string {
 func generateAnimalList() []string {
 	list := make([]string, 0)
 
-	for _, cow := range cows.AssetNames() {
+	for _, cow := range templates.AssetNames() {
 		list = append(list, strings.TrimSuffix(cow, cowSuffix))
 	}
 
